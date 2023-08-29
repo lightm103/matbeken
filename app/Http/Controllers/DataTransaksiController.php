@@ -46,7 +46,8 @@ class DataTransaksiController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = DataPenjualan::where('id',$id)->first();
+        return view('pages.datatransaksi.edit', compact('data'));
     }
 
     /**
@@ -54,7 +55,10 @@ class DataTransaksiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $penjualan = DataPenjualan::where('id',$id)->first();
+        $penjualan->update($data);
+        return redirect()->route('datatransaksi.index');
     }
 
     /**

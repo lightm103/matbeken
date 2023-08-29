@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BuktiPembayaran;
+use App\Models\DataPenjualan;
 use Illuminate\Http\Request;
 
 class DataPembayaranController extends Controller
@@ -11,7 +13,8 @@ class DataPembayaranController extends Controller
      */
     public function index()
     {
-        return view('pages.datapembayaran.index');
+        $data = BuktiPembayaran::all();
+        return view('pages.datapembayaran.index', compact('data'));
     }
 
     /**
