@@ -13,11 +13,9 @@
                                     <th>No Transaksi</th>
                                     <th>Tanggal Transaksi</th>
                                     <th>Nama Pembeli</th>
-                                    <th>Nama Barang</th>
-                                    <th>Quantity</th>
-                                    <th>Harga</th>
+                                    <th>Total</th>
                                     <th>Status</th>
-                                    <th>Detail</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,8 +23,6 @@
                                     <td>1</td>
                                     <td>10/05/2010</td>
                                     <td>Gue</td>
-                                    <td>Kambing Jantan</td>
-                                    <td>1</td>
                                     <td>1000000</td>
                                     <td>Sukses</td>
                                     <td>

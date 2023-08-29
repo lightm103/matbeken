@@ -5,9 +5,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-header">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="ti ti-md ti-square-plus me-1 fs-4"></i>Tambah Barang
-                    </button>
+                    Daftar Jual/Beli Kambing
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Data Barang</h4>
@@ -23,32 +21,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                              @foreach ($databarang as $item)
                               <tr>
-                                <td> {{$item->name}} </td>
-                                <td> {{$item->stock}} </td>
-                                <td> {{$item->harga}} </td>
-                                <td style="vertical-align: middle"><img src="{{url('/storage/fotobarang/'.$item->foto)}}"
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td style="vertical-align: middle"><img src="#"
                                         style="width:60px; height:60px; object-fit:cover;"></td>
                                 <td>
                                     <div class="action-btn d-flex align-items-center justify-content-center">
                                         <a class="text-primary edit" href="" data-modal-title="Edit User"
                                             data-size-modal="lg" data-type="modal" data-bs-toggle="tooltip"
                                             data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
-                                            title="Edit User">
+                                            title="Edit User">Beli
                                             <i class="ti ti-edit fs-5"></i>
                                         </a>
-                                        <form class="" action="{{ route('databarang.destroy',$item->id)}}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-icon" type="submit" data-bs-toggle="tooltip"
-                                                data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
-                                                title="Hapus User"><i class="ti ti-trash fs-5"></i></button>
-                                        </form>
                                     </div>
                                 </td>
                             </tr>
-                              @endforeach
                             </tbody>
                         </table>
                     </div>

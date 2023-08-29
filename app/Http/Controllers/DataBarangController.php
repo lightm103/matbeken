@@ -76,6 +76,8 @@ class DataBarangController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $databarang = DataBarang::where('id',$id)->first();
+        $databarang->delete();
+        return back();
     }
 }

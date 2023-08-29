@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+            <a class="sidebar-link" href="{{ route('datatransaksi.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-alert-circle"></i>
               </span>
@@ -41,21 +41,29 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+            <a class="sidebar-link" href="{{ route('datapembayaran.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-cards"></i>
               </span>
-              <span class="hide-menu">Data User</span>
+              <span class="hide-menu">Data Pembayaran</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{{ route('datauser.index')}}" aria-expanded="false">
+              <span>
+                <i class="ti ti-cards"></i>
+              </span>
+              <span class="hide-menu">User Management</span>
             </a>
           </li>
         </ul>
-        <ul id="sidebarnav">
+        <ul id="">
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">User Menu</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('dashboard')}}" aria-expanded="false">
+            <a class="sidebar-link" href="{{ route('usermenu.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-layout-dashboard"></i>
               </span>
@@ -63,64 +71,10 @@
             </a>
           </li> 
         </ul>
-      </nav>
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-        <ul id="sidebarnav">
+        <ul id="">
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Home</span>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('dashboard')}}" aria-expanded="false">
-              <span>
-                <i class="ti ti-layout-dashboard"></i>
-              </span>
-              <span class="hide-menu">Dashboard</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('databarang.index')}}" aria-expanded="false">
-              <span>
-                <i class="ti ti-article"></i>
-              </span>
-              <span class="hide-menu">Data Barang</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
-              <span>
-                <i class="ti ti-alert-circle"></i>
-              </span>
-              <span class="hide-menu">Data Transaksi</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
-              <span>
-                <i class="ti ti-cards"></i>
-              </span>
-              <span class="hide-menu">Data User</span>
-            </a>
-          </li>
-        </ul>
-        <ul id="sidebarnav">
-          <li class="nav-small-cap">
-            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">User Menu</span>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('dashboard')}}" aria-expanded="false">
-              <span>
-                <i class="ti ti-layout-dashboard"></i>
-              </span>
-              <span class="hide-menu">Dashboard Penjualan</span>
-            </a>
-          </li> 
-        </ul>
-        <ul id="sidebarnav">
-          <li class="nav-small-cap">
-            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Pembeli</span>
+            <span class="hide-menu">Pemilik</span>
           </li>
           <li class="sidebar-item">
             <a class="sidebar-link" href="" aria-expanded="false">
