@@ -66,7 +66,7 @@
                 @foreach ($product as $item)
                     <!-- Start Column 1 -->
                     <div class="col-12 col-md-4 col-lg-3 mb-5">
-                        <a class="product-item" href="{{ route('checkout')}}">
+                        <a class="product-item" href="{{ route('checkout',$item->id)}}">
                             <img src="{{ url('/storage/fotobarang/'.$item->foto)}}" class="img-fluid product-thumbnail">
                             <h3 class="product-title">{{$item->name}}</h3>
                             <strong class="product-price">{{$item->harga}}</strong>

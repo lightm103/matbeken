@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DataPenjualan;
 use Illuminate\Http\Request;
 
 class DataTransaksiController extends Controller
@@ -11,7 +12,9 @@ class DataTransaksiController extends Controller
      */
     public function index()
     {
-        return view('pages.datatransaksi.index');
+        $data = DataPenjualan::all();
+        return view('pages.datatransaksi.index', compact('data'));
+
     }
 
     /**

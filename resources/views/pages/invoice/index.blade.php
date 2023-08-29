@@ -63,20 +63,19 @@
     <div class="untree_co-section product-section before-footer-section">
         <div class="container">
             <div class="row">
-
                 <div class="card">
                     <div class="card-header">
                         <h4>Invoice Pembayaran</h4>
                     </div>
                     <div class="card-body">
-                        <p><strong>Nomor Invoice:</strong> INV123456</p>
-                        <p><strong>Tanggal:</strong> 2023-08-30</p>
-                        <p><strong>Nama Pembeli:</strong> John Doe</p>
+                        <p><strong>Nomor Invoice:</strong> {{ $data['no_invoice']}}</p>
+                        <p><strong>Tanggal:</strong> {{ $data['date']}}</p>
+                        <p><strong>Nama Pembeli:</strong> {{ $data['nama']}}</p>
 
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Produk</th>
+                                    <th>Nama Barang</th>
                                     <th>Jumlah</th>
                                     <th>Harga Satuan</th>
                                     <th>Total</th>
@@ -84,16 +83,16 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Produk A</td>
-                                    <td>2</td>
-                                    <td>$50.00</td>
-                                    <td>$100.00</td>
+                                    <td>{{$data['produk']}}</td>
+                                    <td>{{$data['jumlah']}}</td>
+                                    <td>Rp. {{$data['harga']}}</td>
+                                    <td>Rp. {{$data['total']}}</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td colspan="3" class="text-right"><strong>Total:</strong></td>
-                                    <td>$130.00</td>
+                                    <td>Rp. {{$data['total']}}</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -104,7 +103,9 @@
                         <p><strong>Rekening Pembayaran:</strong> 1234556789012345 Atas Nama Jhon Doe (BANK BRI)</p>
                         <p><strong>Rekening Pembayaran:</strong> 1234556789012345 Atas Nama Jhon Doe (BANK MANDIRI)</p>
                     </div>
-                    <button type="submit" class="btn btn-primary mt-5">Lanjutkan Pembayaran</button>
+                 
+                    <a href="{{ route('confirm')}}" class="btn btn-primary mt-5">Lanjutkan Pembayaran</a>
+                  
                 </div>
 
             </div>

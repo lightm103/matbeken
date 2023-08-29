@@ -65,10 +65,19 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2"> <!-- Menggunakan kolom bootstrap untuk mengatur lebar konten form -->
                     <h1>Bukti Pembayaran Invoice</h1>
-                    <form action="proses_checkout.php" method="post">
+                    <form action="{{ route('storeconfirm')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+
                         <div class="mb-3">
-                            <label for="" class="form-label">Pilih Foto</label>
-                            <input type="file" class="form-control" name="foto" id="" placeholder=""
+                          <label for="no_invoice" class="form-label">No.Invoice</label>
+                          <input type="text"
+                            class="form-control" name="no_invoice" id="no_invoice" aria-describedby="helpId" placeholder="no_invoice">
+                          <small id="helpId" class="form-text text-muted"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Pilih Foto</label>
+                            <input required type="file" class="form-control" name="file" id="file" placeholder="file"
                                 aria-describedby="fileHelpId">
                             <div id="fileHelpId" class="form-text"></div>
                         </div>

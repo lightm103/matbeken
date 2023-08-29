@@ -65,7 +65,8 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2"> <!-- Menggunakan kolom bootstrap untuk mengatur lebar konten form -->
                     <h1>Formulir Checkout Pembelian</h1>
-                    <form action="proses_checkout.php" method="post">
+                    <form action="{{ route('invoice')}}">
+                        <input type="text" value="{{ $data->id}}" name="product_id" hidden>
                         <div class="form-group">
                             <label for="nama">Nama lengkap:</label>
                             <input type="text" class="form-control" id="nama" name="nama" required>
@@ -83,7 +84,7 @@
 
                         <div class="form-group">
                             <label for="produk">Produk yang Dibeli:</label>
-                            <input type="text" class="form-control" id="produk" name="produk" required>
+                            <input type="text" value="{{ $data->name}}" class="form-control" id="produk" name="produk" readonly required>
                         </div>
 
                         <div class="form-group">
@@ -103,8 +104,8 @@
 
                         <div class="form-group">
                             <label for="metode_pembayaran">Metode Pengambilan</label>
-                            <select class="form-control" id="metode_pengambilan" name="metode_pembayaran" required>
-                                <option value="">Potong ditempat</option>
+                            <select class="form-control" id="metode_pengambilan" name="metode_pengambilan" required>
+                                <option value="potong-ditempat">Potong ditempat</option>
                                 <option value="pengiriman">Pengiriman ke Alamat</option>
                             </select>
                         </div>

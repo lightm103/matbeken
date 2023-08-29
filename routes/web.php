@@ -24,9 +24,11 @@ use Illuminate\Support\Facades\Route;
 
 //landingpage 
 Route::get('/', [LandingPageController::class, 'index'])->name('home');
-Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
-Route::view('/invoice', 'pages.invoice.index');
-Route::view('/confirm', 'pages.invoice.confirm');
+Route::get('/checkout/{id}', [CheckoutController::class, 'index'])->name('checkout');
+Route::get('/invoice', [CheckoutController::class, 'invoice'])->name('invoice');
+Route::get('/confirm', [CheckoutController::class, 'confirm'])->name('confirm');
+Route::post('/storeconfirm', [CheckoutController::class, 'storeconfirm'])->name('storeconfirm');
+Route::post('/storepenjualan', [CheckoutController::class, 'storepenjualan'])->name('storepenjualan');
 
 // admin menu
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
