@@ -4,40 +4,38 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card">
-                <div class="card-header">
-                    Daftar Jual/Beli Kambing
-                </div>
                 <div class="card-body">
-                    <h4 class="card-title">Data Barang</h4>
+                    <h4 class="card-title">History Pembelian</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
+                                    <th>No Transaksi</th>
+                                    <th>Tanggal Transaksi</th>
                                     <th>Nama Barang</th>
-                                    <th>Stock</th>
+                                    <th>Quantity</th>
                                     <th>Harga</th>
-                                    <th>Foto</th>
-                                    <th>Action</th>
+                                    <th>Status</th>
+                                    <th>Detail</th>
                                 </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td style="vertical-align: middle"><img src="#"
-                                        style="width:60px; height:60px; object-fit:cover;"></td>
-                                <td>
-                                    <div class="action-btn d-flex align-items-center justify-content-center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>10/05/2010</td>
+                                    <td>Kambing Jantan</td>
+                                    <td>1</td>
+                                    <td>1000000</td>
+                                    <td>Sukses</td>
+                                    <td>
                                         <a class="text-primary edit" href="" data-modal-title="Edit User"
                                             data-size-modal="lg" data-type="modal" data-bs-toggle="tooltip"
                                             data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
-                                            title="Edit User">Beli
-                                            <i class="ti ti-edit fs-5"></i>
+                                            title="Edit User">
+                                            <i class="ti ti-edit fs-5">Detail</i>
                                         </a>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
