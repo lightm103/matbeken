@@ -5,7 +5,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Data Barang</h4>
+                    <h4 class="card-title">Data Transaksi Barang</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
@@ -17,7 +17,7 @@
                                     <th>Quantity</th>
                                     <th>Total</th>
                                     <th>Status</th>
-                                    <th>Detail</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>

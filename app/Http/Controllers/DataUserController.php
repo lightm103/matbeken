@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DataUserController extends Controller
@@ -11,7 +12,8 @@ class DataUserController extends Controller
      */
     public function index()
     {
-        return view('pages.datauser.index');
+        $data = User::all();
+        return view('pages.datauser.index', compact('data'));
     }
 
     /**
@@ -19,7 +21,8 @@ class DataUserController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('pages.datauser.create');
     }
 
     /**
@@ -27,7 +30,9 @@ class DataUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        User::create($data);
+        return redirect()->route('datauser.index');
     }
 
     /**

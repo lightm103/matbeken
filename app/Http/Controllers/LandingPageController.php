@@ -11,4 +11,8 @@ class LandingPageController extends Controller
         $product = DataBarang::all();
         return view('pages.landingpage.index', compact('product'));
     }
+
+    public function register(){
+        return view('pages.register.index');
+    }
 }

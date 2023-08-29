@@ -9,7 +9,7 @@
                         <span class="card-title">
                             Users Management
                         </span>
-                        <a href="#" class="btn btn-primary" data-modal-title="Tambah User" data-size-modal="lg"
+                        <a href="{{ route('datauser.create')}}" class="btn btn-primary" data-modal-title="Tambah User" data-size-modal="lg"
                             data-type="modal" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="top"
                             data-bs-html="true" title="Tambah User">
                             <i class="ti ti-md ti-square-plus me-1 fs-4"></i>Tambah User
@@ -28,12 +28,12 @@
                             </tr>
                         </thead>
                         <tbody>
-
+                            @foreach ($data as $item)
                             <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->email}}</td>
+                                <td>{{$item->role}}</td>
                                 <td>
                                     <div class="action-btn d-flex align-items-center justify-content-center">
                                         <a class="text-primary edit" href="#" data-modal-title="Edit User"
@@ -42,6 +42,11 @@
                                             title="Edit User">
                                             <i class="ti ti-edit fs-5"></i>
                                         </a>
+                                        {{-- <a class="text-dark delete ms-2"
+                                    href="{{ route('users-setting.destroy', $item->id) }}" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="top"
+                                    data-bs-html="true" title="Hapus User">
+                                    <i class="ti ti-trash fs-5"></i>
+                                </a> --}}
                                         <form class="" action="#" method="post">
                                             @csrf
                                             @method('DELETE')
@@ -52,6 +57,8 @@
                                     </div>
                                 </td>
                             </tr>
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>

@@ -29,6 +29,7 @@ Route::get('/invoice', [CheckoutController::class, 'invoice'])->name('invoice');
 Route::get('/confirm', [CheckoutController::class, 'confirm'])->name('confirm');
 Route::post('/storeconfirm', [CheckoutController::class, 'storeconfirm'])->name('storeconfirm');
 Route::post('/storepenjualan', [CheckoutController::class, 'storepenjualan'])->name('storepenjualan');
+Route::get('/register', [LandingPageController::class, 'register'])->name('register');
 
 // admin menu
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
