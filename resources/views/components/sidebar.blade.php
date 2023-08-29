@@ -14,7 +14,7 @@
         <ul id="sidebarnav">
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Home</span>
+            <span class="hide-menu">Admin Menu</span>
           </li>
           <li class="sidebar-item">
             <a class="sidebar-link" href="{{ route('dashboard')}}" aria-expanded="false">
@@ -57,7 +57,7 @@
             </a>
           </li>
         </ul>
-        <ul id="">
+        <ul id="sidebar-item">
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">User Menu</span>
@@ -71,21 +71,13 @@
             </a>
           </li> 
         </ul>
-        <ul id="">
+        <ul id="sidebar-item">
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Pemilik</span>
+            <span class="hide-menu">Owner Menu</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="" aria-expanded="false">
-              <span>
-                <i class="ti ti-layout-dashboard"></i>
-              </span>
-              <span class="hide-menu">Dashboard</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="" aria-expanded="false">
+            <a class="sidebar-link" href="{{ route('laporanpenjualan.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-article"></i>
               </span>

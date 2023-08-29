@@ -5,6 +5,7 @@ use App\Http\Controllers\DataBarangController;
 use App\Http\Controllers\DataPembayaranController;
 use App\Http\Controllers\DataTransaksiController;
 use App\Http\Controllers\DataUserController;
+use App\Http\Controllers\LaporanPenjualanController;
 use App\Http\Controllers\UserMenuController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +33,6 @@ Route::resource('/datauser', DataUserController::class);
 // User Menu
 Route::resource('/usermenu', UserMenuController::class);
 
+// Pemilik/Owner Menu
+Route::resource('/laporanpenjualan', LaporanPenjualanController::class);
 Route::view('laporan','');
