@@ -60,35 +60,25 @@
     <!-- End Hero Section -->
 
 
-    <div class="untree_co-section product-section before-footer-section">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Form Registrasi</h4>
-                            <form action="{{ route('registerstore')}}" method="post">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="name">Nama lengkap:</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Alamat Email:</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Kata Sandi:</label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="konfirmasi_password">Konfirmasi Kata Sandi:</label>
-                                    <input type="password" class="form-control" id="konfirmasi_password"
-                                        name="konfirmasi_password" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Daftar</button>
-                            </form>
-                        </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Form Login</h4>
+                        <form action="{{ route('loginstore')}}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="email">Alamat Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Kata Sandi:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Masuk</button>
+                        </form>
+                        <a href="{{ route('register')}}" class="button">Belum Punya Akun? daftar Sekarang!</a>
                     </div>
                 </div>
             </div>

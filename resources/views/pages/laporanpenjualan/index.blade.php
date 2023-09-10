@@ -4,9 +4,25 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card">
-                <div class="card-body">
+                <div class="card-header">
                     <h4 class="card-title">Data Transaksi Barang</h4>
+                </div>
+                <div class="card-body">
                     <div class="table-responsive">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label> Start Date:</label>
+                                <input type="date" name="start_date" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label> End Date:</label>
+                                <input type="date" name="end_date" class="form-control">
+                            </div>
+                            <div class="col-md-1 pt-3">
+                                <button type="submit" class="btn btn-primary">Filter</button>
+                            </div>
+                        </div>
+                        <br>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -31,7 +47,7 @@
                                     <td>{{$item->total}}</td>
                                     <td>{{$item->status}}</td>
                                     <td>
-                                        <a href="{{ route('datatransaksi.edit',$item->id)}}" class="btn btn-primary">
+                                        <a href="" class="btn btn-primary">
                                             <i class="ti ti-md ti-square-plus me-1 fs-4"></i>Detail
                                         </a>
                                     </td>

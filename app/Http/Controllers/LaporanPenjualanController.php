@@ -63,4 +63,16 @@ class LaporanPenjualanController extends Controller
     {
         //
     }
+
+    public function filter(Request $request){
+
+        $start_date =$request->start_date;
+        $end_date =$request->end_date;
+
+        $data = DataPenjualan::whereDate('created_at','>=',$start_date)
+                                ->whereDate('created_at','<=',$end_date)
+                                ->get();
+
+        return view('pages.laporanpenjualan.index',compact('data'));
+    }
 }

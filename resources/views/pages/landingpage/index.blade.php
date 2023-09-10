@@ -33,7 +33,7 @@
 
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                    <li><a class="nav-link" href="#"><img src="{{ asset('landingpage/images/user.svg') }}"></a>
+                    <li><a class="nav-link" href="{{ route('login')}}"><img src="{{ asset('landingpage/images/user.svg') }}"></a>
                     </li>
                 </ul>
             </div>
