@@ -17,6 +17,7 @@
                                 <tr>
                                     <th>Nama Barang</th>
                                     <th>Stock</th>
+                                    <th>Berat Kambing</th>
                                     <th>Harga</th>
                                     <th>Foto</th>
                                     <th>Action</th>
@@ -27,6 +28,7 @@
                               <tr>
                                 <td> {{$item->name}} </td>
                                 <td> {{$item->stock}} </td>
+                                <td> {{$item->berat}} </td>
                                 <td> {{$item->harga}} </td>
                                 <td style="vertical-align: middle"><img src="{{url('/storage/fotobarang/'.$item->foto)}}"
                                         style="width:60px; height:60px; object-fit:cover;"></td>
@@ -76,6 +78,12 @@
                             <div class="mb-3">
                                 <label for="" class="form-label">Stock</label>
                                 <input type="text" class="form-control" name="stock" id=""
+                                    aria-describedby="helpId" placeholder="">
+                                <small id="helpId" class="form-text text-muted"></small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Berat Kambing</label>
+                                <input type="text" class="form-control" name="berat" id=""
                                     aria-describedby="helpId" placeholder="">
                                 <small id="helpId" class="form-text text-muted"></small>
                             </div>

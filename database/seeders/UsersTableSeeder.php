@@ -3,19 +3,18 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class UsersTableSeeder extends Seeder
 {
     public function run()
     {
         User::create([
-            'username' => 'admin@gmail.com',
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'email_verified_at' => now(),
             'password' => bcrypt('admin123456'),
-            'role' => '1',
-            'status' => true,
+            'role' => 'admin',
         ]);
     }
 }
-
