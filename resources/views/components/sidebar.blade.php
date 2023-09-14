@@ -3,7 +3,7 @@
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
             <a href="./index.html" class="text-nowrap logo-img">
-                <img src="../assets/images/logos/dark-logo.svg" width="180" alt="" />
+                <a class="navbar-brand" href="#"><img src="{{ asset('landingpage/images/matbeken2.png') }}" style="width: 250px; height: auto;"></a>
             </a>
             <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                 <i class="ti ti-x fs-8"></i>
@@ -93,14 +93,6 @@
                     </li>
                 </ul>
             @endif
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ route('logout')}}" aria-expanded="false">
-                  <span>
-                      <i class="ti ti-cards"></i>
-                  </span>
-                  <span class="hide-menu">Log Out</span>
-              </a>
-          </li>
         </nav>
         <!-- End Sidebar navigation -->
     </div>
